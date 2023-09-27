@@ -1,7 +1,3 @@
-body {
-    background-color: #DCE0E4;
-}
-
 nav {
     background-color: #F4F3F3;
     display: flex;
@@ -51,46 +47,24 @@ nav img {
     color: white;
 }
 
+.container {
+    background-color: white;
+    box-shadow: 10px 0 10px rgb(202, 201, 201);
+    margin-top: 80px;
+    margin: 80px;
+    padding: 35px;
+    width: 60%;
+}
 
-.container p {
+.a1{
     font-size: 30px;
     font-weight: bold;
-    text-align: center;
-    margin-top: 80px;
 }
 
-form {
-    width: 50%;
-    margin: 20px 0 0 500px;
-}
-
-input,
-select {
-    width: 100%;
-    height: 35px;
-    border-radius: 7px;
-    border-color: rgb(255, 255, 255);
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-textarea {
-    width: 100%;
-    resize: none;
-}
-
-.container button {
-    margin-top: 30px;
-    border-radius: 15px;
+.contact {
     background-color: black;
     color: white;
+    border-radius: 15px;
     width: 100px;
     height: 30px;
-    font-size: 16px;
-    margin-left: 90%;
-
 }
