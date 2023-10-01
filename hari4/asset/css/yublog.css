@@ -1,0 +1,80 @@
+nav {
+    background-color: #F4F3F3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 70px;
+}
+
+nav img {
+    width: 40px;
+    height: 20px;
+}
+
+.bagiankiri {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.bagiankiri p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.bagiankiri a {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.bagiankanan {
+    background-color: black;
+    border-radius: 7px;
+    height: 25px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.bagiankanan a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.container {
+    background-color: aliceblue;
+    margin: 10%;
+    padding: 100px;
+}
+
+.container2 {
+    width: 400px;
+}
+
+.container3 {
+    width: auto;
+}
+
+/* Membuat tabel container */
+.tablewm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Untuk mengatur jarak antara sel */
+  }
+  
+  /* Mengatur lebar masing-masing sel */
+  .tablewm td {
+    width: calc(25% - 10px); /* 4 kolom per baris (25% - jarak antara sel) */
+    margin-bottom: 10px; /* Jarak vertikal antara baris */
+    box-sizing: border-box;
+  }
+  
+
+  
