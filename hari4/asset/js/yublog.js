@@ -14,22 +14,22 @@ function submitData(event) {
 
         const reactjsCheckbox = document.getElementById('reactjsCheckbox');
         if (reactjsCheckbox.checked) {
-            saveBox.push('React JS');
+            saveBox.push('<i class="fa-brands fa-react fa" style="color: #000000;"> React Js</i>');
         }
 
         const nodejsCheckbox = document.getElementById('nodejsCheckbox');
         if (nodejsCheckbox.checked) {
-            saveBox.push('Node JS');
+            saveBox.push('<i class="fa-brands fa-node-js fa" style="color: #000000;"> Node Js</i>');
         }
 
         const typescriptCheckbox = document.getElementById('typescriptCheckbox');
         if (typescriptCheckbox.checked) {
-            saveBox.push('TypeScript');
+            saveBox.push('<i class="fa-brands fa-square-js fa">Typescript</i>');
         }
 
         const nextjsCheckbox = document.getElementById('nextjsCheckbox');
         if (nextjsCheckbox.checked) {
-            saveBox.push('Next JS');
+            saveBox.push('<i class="fa-brands fa-rocketchat fa">Next JS</i>');
         }
 
         return saveBox;
@@ -62,7 +62,7 @@ function renderBlog() {
         <img src="${data[i].upfile}" alt="fotoKeren"
             style="border-radius: 7px 7px 0 0; width:100%; height: 330px;">
         <div style="text-align: center; margin-top:-15px; height: 300px;">
-            <h3>Project Name</h3>
+            <h3>${data[i].pjname}</h3>
             <p>durasi : ${data[i].startdate} - ${data[i].enddate}</p><br>
     
             <p>${data[i].description}</p><br><br>
