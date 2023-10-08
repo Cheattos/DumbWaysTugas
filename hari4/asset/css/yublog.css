@@ -62,19 +62,15 @@ nav img {
     width: auto;
 }
 
-/* Membuat tabel container */
 .tablewm {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Untuk mengatur jarak antara sel */
-  }
-  
-  /* Mengatur lebar masing-masing sel */
-  .tablewm td {
-    width: calc(25% - 10px); /* 4 kolom per baris (25% - jarak antara sel) */
-    margin-bottom: 10px; /* Jarak vertikal antara baris */
-    box-sizing: border-box;
-  }
-  
+    justify-content: space-between;
+}
 
-  
+
+.tablewm td {
+    width: 400px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}

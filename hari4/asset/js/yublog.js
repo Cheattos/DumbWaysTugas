@@ -73,3 +73,18 @@ function renderBlog() {
         `;
     }
 }
+
+//membuat fungsi penjumlahan yang nilai mengambil dari parameter
+
+let a = 1;
+let b = 2;
+
+let jum = 0;
+let int 
+
+function tambah(){
+    var hasil = a+b;
+    return hasil;
+}
+
+console.log(tambah());
