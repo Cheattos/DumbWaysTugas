@@ -1,0 +1,95 @@
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F3F3;
+    color: #fff;
+    padding: 10px;
+}
+
+.listitem {
+    display: none;
+}
+
+/* Style for the logo */
+.logo-img {
+    width: 50px;
+    /* Adjust the size as needed */
+    cursor: pointer;
+}
+
+.listmenu {
+    display: none;
+}
+
+@media only screen and (max-width: 942px) {
+    .nu {
+        display: none;
+    }
+
+    .listitem {
+        display: block;
+    }
+
+    /* CSS untuk membuat navigasi vertikal */
+    .listitem {
+        background-color: #F4F3F3;
+        max-width: auto;
+        /* Lebar navigasi */
+        padding: 20px 0;
+        /* Ruang kosong di sekitar menu */
+    }
+
+    .listitem ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .listitem li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .listitem a {
+        display: block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+
+    .listitem a:hover {
+        background-color: rgb(255, 32, 32);
+    }
+
+    /* Mengatur tampilan menu vertikal */
+    .listmenu {
+        display: none;
+        /* Membuat listmenu vertikal menjadi blok */
+        margin: 20px 0;
+        /* Mengatur jarak antara listmenu dan logo */
+    }
+
+    .listmenu {
+        list-style: none;
+        padding: 0;
+    }
+
+    .listmenu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .listmenu a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .listmenu a:hover {
+        background-color: rgb(255, 14, 14);
+    }
+}

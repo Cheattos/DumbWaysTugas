@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Ke 4</title>
+
+    <link rel="stylesheet" href="./asset/css/mycss.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo" id="logo">
+            <img src="./asset/gambar/brandred.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="menu" id="menu">
+            <ul class="menu-list">
+                <li>
+                    <p><a href="/hari8/index.html">Home</a></p>
+                </li>
+                <li>
+                    <p><a href="/hari8/myproject.html">My Project</a></p>
+                </li>
+                <li>
+                    <p><a href="/hari8/yublog.html">Add Project</a></p>
+                </li>
+                <li>
+                    <p><a href="/hari8/testimoni.html">Testimoni</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-button" id="menubutton">
+            <button class="btn"> <a href="/hari8/contact.html">Contact Me</a></button>
+        </div>
+    </nav>
+
+    <nav class="listitem">
+        <ul>
+            <li>
+                <div class="logom" id="logo" onclick="toggleMenu()">
+                    <img src="./asset/gambar/brandred.png" alt="Logo" class="logo-img">
+                </div>
+            </li>
+            <li>
+                <div class="listmenu" id="listmenu">
+                    <ul>
+                        <li>
+                            <p><a href="/hari8/index.html">Home</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/hari8/myproject.html">My Project</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/hari8/yublog.html">Add Project</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/hari8/contact.html">Contact Me</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/hari8/testimoni.html">Testimoni</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p>GET IN TOUCH</p>
+
+        <form action="">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="hp">Phone Number</label>
+                <input type="text" name="hp" id="hp">
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <select name="subject" id="subject">
+                    <option value="pesan1">pesan1</option>
+                    <option value="pesan2">pesan2</option>
+                    <option value="pesan3">pesan3</option>
+                </select>
+            </div>
+            <div>
+                <label for="pesan">Your Masage</label><br>
+                <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+            </div>
+
+            <button type="button" onclick="kirim()">Submit</button>
+        </form>
+
+    </div>
+    <script src="./asset/js/main.js"></script>
+</body>
+
+</html>

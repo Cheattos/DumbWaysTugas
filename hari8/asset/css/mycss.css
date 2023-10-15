@@ -1,0 +1,200 @@
+body {
+    background-color: #DCE0E4;
+}
+
+.container p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 80px;
+}
+
+form {
+    width: 50%;
+    margin: 20px 0 0 500px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 35px;
+    border-radius: 7px;
+    border-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.container button {
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    margin-left: 90%;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F3F3;
+    color: #fff;
+    padding: 10px;
+}
+
+.listitem {
+    display: none;
+}
+
+/* Style for the logo */
+.logo-img {
+    width: 50px;
+    /* Adjust the size as needed */
+    cursor: pointer;
+}
+
+/* Style for the menu */
+.menu {
+    display: flex;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 50px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 20px;
+    /* Adjust the spacing as needed */
+}
+
+/* Style for the menu button */
+.menu-button {
+    display: flex;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.listmenu {
+    display: none;
+}
+
+@media only screen and (max-width: 651px) {
+    nav {
+        width: 600px;
+    }
+
+    .formI {
+        margin-left: -90px;
+    }
+}
+
+/* Media query for responsive design */
+@media only screen and (max-width: 651px) {
+    .navbar {
+        display: none;
+    }
+
+    .listitem {
+        display: block;
+    }
+
+    /* ................................................ */
+    .logom{
+        margin-left: 550px;
+    }
+
+    /* CSS untuk membuat navigasi vertikal */
+    .listitem {
+        background-color: #F4F3F3;
+        width: 650px;
+        /* Lebar navigasi */
+        padding: 20px 0;
+        /* Ruang kosong di sekitar menu */
+    }
+
+    .listitem ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .listitem li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .listitem a {
+        display: block;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+
+    .listitem a:hover {
+        background-color: rgb(255, 32, 32);
+    }
+
+    /* Mengatur tampilan menu vertikal */
+    .listmenu {
+        display: none;
+        /* Membuat listmenu vertikal menjadi blok */
+        margin: 20px 0;
+        /* Mengatur jarak antara listmenu dan logo */
+    }
+
+    .listmenu {
+        list-style: none;
+        padding: 0;
+    }
+
+    .listmenu li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .listmenu a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .listmenu a:hover {
+        background-color: rgb(255, 14, 14);
+    }
+}
