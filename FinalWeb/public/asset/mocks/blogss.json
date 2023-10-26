@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b6d8b190-9c52-4e79-abf4-8c8e50fdd058",
+    "projectname": "coba 0",
+    "startdate": "2023-10-02",
+    "enddate": "2023-10-30",
+    "duration": "28 hari",
+    "technologies": [
+      "Node JS",
+      "React JS",
+      "Next JS",
+      "TypeScript"
+    ],
+    "description": "ini percobaan 0"
+  },
+  {
+    "projectname": "Arre Pangestu",
+    "startdate": "12-12-2023",
+    "enddate": "01-01-2024",
+    "duration": "3 bulan",
+    "technologies": "javascript",
+    "description": "uhuybat"
+  }
+]

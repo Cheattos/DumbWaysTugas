@@ -8,8 +8,6 @@ const fs = require('fs');
 const hbs = require('hbs');
 const { v4: uuidv4 } = require('uuid');
 
-
-
 // setup to call hbs 
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'src/view'))

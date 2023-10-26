@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Arre Pangestu</title>
+    <link rel="stylesheet" href="/css/yublog.css">
+    <script src="https://kit.fontawesome.com/a96498589b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="listitem">
+        <ul>
+            <li>
+                <div class="logom" id="logo" onclick="toggleMenu()">
+                    <img src="/gambar/brandred.png" alt="Logo" class="logo-img">
+                </div>
+            </li>
+            <li>
+                <div class="listmenu" id="listmenu">
+                    <ul>
+                        <li>
+                            <p><a href="/">Home</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/myproject">My Project</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/testimoni">Testimoni</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/myblog">Blog</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/contact">Contact Me</a></p>
+                        </li>
+                        {{#if isLogin}}
+                        <li>
+                            <p><a href="/logout">Login</a></p>
+                        </li>
+                        {{else}}
+                        <li>
+                            <p><a href="/loginform">Login</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/registerform">Register</a></p>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="nu">
+        <nav class="navutama navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="/">
+                    <img src="/gambar/brandred.png" alt="Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/myproject">My Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/testimoni">Testimoni</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/myblog">Blog</a>
+                        </li>
+                        {{#if isLogin}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 15rem;">
+                            <a class="nav-link" href="">Hi, {{ data.name }}</a>
+                        </li>
+                        {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/loginform">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registerform">Register</a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                    <button type="button" class="btn btn-info me-3">
+                        <a class="nav-link" href="/contact">Contact Me</a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        {{#if isLogin}}
+        <a href="/formmyblog"><button type="button" class="btn btn-primary mt-5">Add Blog</button></a>
+        {{/if}}
+        <div class="card mb-3 mt-5" style="max-width: auto;">
+            {{#each blogs }}
+            <div class="row g-5 mb-3">
+                <div class="col-xl-5 col-md-4">
+                    <a href="/detailblog/{{ this.idmyblog }}"><img src="{{ this.images }}"
+                            class="img-fluid rounded-start" alt="{{ this.images }}"></a>
+                </div>
+                <div class="col-xl-7 col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold fs-2 text-uppercase">{{ this.projectname }}</h5>
+                        <p class="card-text fs-6">{{ this.startdate }} | {{ this.enddate }}</p>
+                        <p class="card-text technologies-text">{{ this.description }}</p>
+                        <p class="card-text">{{ this.technologies }}</p>
+                        <p class="card-text"><small class="text-body-secondary">{{ this.duration }}</small></p>
+                        {{#if this.isLogin}}
+                        <a href="/editmyblog/{{ this.idmyblog }}"><button type="button"
+                                class="btn btn-primary">Edit</button></a>
+                        <a href="/deleteblog/{{this.idmyblog}}"><button type="button"
+                                class="btn btn-primary">Delete</button></a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elements = document.querySelectorAll(".technologies-text");
+
+            elements.forEach(function (element) {
+                var text = element.textContent;
+                if (text.length > 35) {
+                    element.textContent = text.slice(0, 35) + " ...";
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
